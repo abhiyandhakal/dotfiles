@@ -1,0 +1,12 @@
+[submodule "nvim"]
+	path = nvim
+	url = https://github.com/abhiyandhakal/nvim-config.git
+[submodule "zsh/plugins/zsh-autosuggestions"]
+	path = zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/plugins/zsh-syntax-highlighting"]
+	path = zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule "zsh/plugins/zsh-theme"]
+	path = zsh/plugins/zsh-theme
+	url = https://github.com/abhiyandhakal/abhiyan.zsh.git
