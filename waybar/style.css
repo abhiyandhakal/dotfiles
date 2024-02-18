@@ -1,0 +1,133 @@
+window#waybar {
+  background: #252536;
+  color: white;
+}
+
+#workspaces {
+  background: #112;
+  margin-left: 0.65rem;
+  padding: 0 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.5rem;
+}
+
+#workspaces button {
+  padding: 0.25rem 0.5rem;
+}
+
+#workspaces button:hover {
+  padding: 0.25rem 0.5rem;
+  background: rgba(0, 190, 255, 0.3);
+  border-radius: 0;
+}
+
+#workspaces button.active {
+  background: #00ddff;
+  color: #223344;
+  border-radius: 0;
+}
+
+#backlight-slider {
+  background: #112;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding-left: 0.5rem;
+}
+#backlight-slider slider {
+  min-height: 0px;
+  min-width: 0px;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+}
+#backlight-slider trough {
+  min-width: 80px;
+  min-height: 2px;
+  border-radius: 5px;
+  background-color: white;
+}
+#backlight-slider highlight {
+  min-width: 0px;
+  border-radius: 5px;
+  background-color: teal;
+}
+#backlight {
+  background: #112;
+  border-radius: 0.5rem 0 0 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding-left: 0.5rem;
+}
+
+#pulseaudio {
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+  background: #112;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  border-radius: 0.5rem;
+}
+
+#memory {
+  background: #112;
+  border-radius: 0.5rem 0 0 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding-left: 1rem;
+}
+#cpu {
+  background: #112;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding-right: 0.5rem;
+}
+
+#battery {
+  background: #112;
+  border-radius: 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding-right: 0.5rem;
+  padding-left: 0.75rem;
+  margin-left: 0.5rem;
+}
+
+#bluetooth {
+  background: #112;
+  border-radius: 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+}
+
+#clock {
+  background: #112;
+  border-radius: 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+}
+
+#tray {
+  background: #112;
+  border-radius: 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.65rem;
+}
+
+#window {
+  background: #112;
+  border-radius: 0.5rem;
+  margin-top: 0.35rem;
+  margin-bottom: 0.35rem;
+  margin-left: 0.5rem;
+  margin-right: 0.65rem;
+}
