@@ -1,122 +1,105 @@
 {
-	"layer": "top",
-	"height": 32,
-	"modules-left": [
-		"hyprland/workspaces",
-		"pulseaudio",
-		"memory",
-		"cpu"
-	],
-	"modules-right": [
-		"backlight",
-		"backlight/slider",
-		"battery",
-		"bluetooth",
-		"clock",
-		"tray"
-	],
-	"modules-center": [
-		"hyprland/window"
-	],
-	"hyprland/workspaces": {
-		"format-icons": {
-			"1": "", // terminal & coding
-			"2": "󰈹", // internet surfing
-			"3": "", // media
-			"4": "󰈦", // document viewing / editing
-			"5": "", // music
-			"6": "󰕼", // video
-			"7": "", // media editing
-			"default": ""
-		},
-		"persistent-workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": [],
-			"6": [],
-			"7": []
-		},
-		"sort-by-number": true,
-		"format": "{icon}"
-	},
-	"backlight": {
-		"interval": 1,
-		"format": "󰃠  {percent}%"
-	},
-	"backlight/slider": {
-		"min": 1
-	},
-	"battery": {
-		"bat": "BAT1",
-		"interval": 1,
-		"format-charging": "<span font='Font Awesome 5 Free'></span> {capacity}% ",
-		"states": {
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon}   {capacity}%",
-		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
-		],
-		"max-length": 25
-	},
-	"bluetooth": {
-		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-		"format": " {status}",
-		"format-disabled": "", // an empty format will hide the module
-		"format-connected": " {num_connections} connected",
-		"tooltip-format": "{controller_alias}\t{controller_address}",
-		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-	},
-	"tray": {
-		"spacing": 5
-	},
-	"clock": {
-		"interval": 1,
-		"format": "{:%I:%M:%S %p}",
-		"format-alt": "{:%Y-%m-%d}"
-	},
-	"cpu": {
-		"interval": 10,
-		"format": "{usage}%  ",
-		"max-length": 10
-	},
-	"hyprland/window": {
-		"format": "  {title}  "
-	},
-	"memory": {
-		"interval": 30,
-		"format": "{}%  ",
-		"max-length": 10
-	},
-	"pulseaudio": {
-		"scroll-step": 1, // %, can be a float
-		"format": "{volume}% {icon} {format_source}",
-		"format-bluetooth": "{volume}% {icon} {format_source}",
-		"format-bluetooth-muted": " {icon} {format_source}",
-		"format-muted": " {format_source}",
-		"format-source": "{volume}% ",
-		"format-source-muted": "",
-		"format-icons": {
-			"headphone": "",
-			"hands-free": "",
-			"headset": "",
-			"phone": "",
-			"portable": "",
-			"car": "",
-			"default": [
-				" ",
-				" ",
-				" "
-			]
-		},
-		"on-click": "pavucontrol"
-	}
+  "layer": "top",
+  "height": 32,
+  "modules-left": ["hyprland/workspaces", "pulseaudio", "memory", "cpu"],
+  "modules-right": [
+    "backlight",
+    "backlight/slider",
+    "battery",
+    "bluetooth",
+    "clock",
+    "tray"
+  ],
+  "modules-center": ["hyprland/window"],
+  "hyprland/workspaces": {
+    "format-icons": {
+      "1": "", // terminal & coding
+      "2": "󰈹", // internet surfing
+      "3": "", // media
+      "4": "󰈦", // document viewing / editing
+      "5": "", // music
+      "6": "󰕼", // video
+      "7": "", // media editing
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": []
+    },
+    "sort-by-number": true,
+    "format": "{icon}"
+  },
+  "backlight": {
+    "interval": 1,
+    "format": "󰃠  {percent}%"
+  },
+  "backlight/slider": {
+    "min": 1
+  },
+  "battery": {
+    "bat": "BAT1",
+    "interval": 1,
+    "format-charging": "<span font='Font Awesome 5 Free'></span> {capacity}% ",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}   {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "bluetooth": {
+    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+    "format": " {status}",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  },
+  "tray": {
+    "spacing": 5
+  },
+  "clock": {
+    "interval": 1,
+    "format": "{:%I:%M:%S %p}",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "{usage}%  ",
+    "max-length": 10
+  },
+  "hyprland/window": {
+    "format": "  {title}  "
+  },
+  "memory": {
+    "interval": 1,
+    "format": "{}%  ",
+    "max-length": 10
+  },
+  "pulseaudio": {
+    "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [" ", " ", " "]
+    },
+    "on-click": "pavucontrol"
+  }
 }
