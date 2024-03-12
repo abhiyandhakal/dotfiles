@@ -130,7 +130,7 @@ alias cpufast='sudo cpupower frequency-set -g performance'
 
 # trash and rm
 alias rm='trash'
-alias remove='rm -rf'
+alias remove='\rm -rf'
 
 # neofetch
 alias nf='neofetch'
