@@ -1,91 +1,72 @@
 {
-  "layer": "top",
   "height": 32,
-  "modules-left": ["hyprland/workspaces", "pulseaudio", "memory", "cpu"],
+  "modules-left": ["custom/media", "power-profiles-daemon", "hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "pulseaudio",
+    "cpu",
+    "memory",
     "backlight",
-    "backlight/slider",
+    "sway/language",
     "battery",
-    "bluetooth",
     "clock",
-    "tray"
+    "tray",
+    "custom/power",
   ],
-  "modules-center": ["hyprland/window"],
-  "hyprland/workspaces": {
-    "format-icons": {
-      "1": "", // terminal & coding
-      "2": "󰈹", // internet surfing
-      "3": "", // media
-      "4": "󰈦", // document viewing / editing
-      "5": "", // music
-      "6": "󰕼", // video
-      "7": "", // media editing
-      "default": ""
-    },
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": [],
-      "6": [],
-      "7": []
-    },
-    "sort-by-number": true,
-    "format": "{icon}"
-  },
-  "backlight": {
-    "interval": 1,
-    "format": "󰃠  {percent}%"
-  },
-  "backlight/slider": {
-    "min": 1
-  },
-  "battery": {
-    "bat": "BAT1",
-    "interval": 1,
-    "format-charging": "<span font='Font Awesome 5 Free'></span> {capacity}% ",
-    "states": {
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon}   {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "max-length": 25
-  },
-  "bluetooth": {
-    // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-    "format": " {status}",
-    "format-disabled": "", // an empty format will hide the module
-    "format-connected": " {num_connections} connected",
-    "tooltip-format": "{controller_alias}\t{controller_address}",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
+  // Modules configuration
+  "hyprland/window": {
+    "icon": true,
   },
   "tray": {
-    "spacing": 5
+    "spacing": 10,
   },
   "clock": {
-    "interval": 1,
-    "format": "{:%I:%M:%S %p}",
-    "format-alt": "{:%Y-%m-%d}"
+    // "timezone": "America/New_York",
+    // "tooltip-format": "<big>{:%Y / %m / %d}\nTime: {:%H:%M}</big>",
+    "tooltip-format": "{:%Y / %m / %d\n%H:%M}",
+    "format-alt": "{:%Y / %m / %d}",
   },
   "cpu": {
-    "interval": 10,
     "format": "{usage}%  ",
-    "max-length": 10
-  },
-  "hyprland/window": {
-    "format": "  {title}  "
+    "tooltip": false,
+    "interval": 1,
   },
   "memory": {
-    "interval": 1,
     "format": "{}%  ",
-    "max-length": 10
+    "interval": 1,
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15,
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}%  ",
+    "format-plugged": "{capacity}%  ",
+    "format-alt": "{time} {icon}",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "interval": 1,
+  },
+  "power-profiles-daemon": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
+      "default": "Performance",
+      "performance": "Performance",
+      "balanced": "Balanced",
+      "power-saver": "Power Saver",
+    },
   },
   "pulseaudio": {
-    "scroll-step": 1, // %, can be a float
-    "format": "{volume}% {icon} {format_source}",
+    // "scroll-step": 1, // %, can be a float
+    "format": "{volume}% {icon}  {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
     "format-muted": " {format_source}",
@@ -98,8 +79,31 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [" ", " ", " "]
+      "default": ["", "", ""],
     },
-    "on-click": "pavucontrol"
-  }
+    "on-click": "pavucontrol",
+  },
+  "custom/media": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "max-length": 20,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜",
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null",
+    "on-click": "hyprctl dispatch workspace 5",
+  },
+  "custom/power": {
+    "format": "⏻ ",
+    "menu": "on-click",
+    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+    "menu-actions": {
+      "shutdown": "poweroff",
+      "reboot": "reboot",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate",
+    },
+  },
 }

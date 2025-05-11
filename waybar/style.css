@@ -1,133 +1,56 @@
-window#waybar {
-  background: #252536;
-  color: white;
+* {
+  font-family:
+    JetBrainsMono Nerd Font,
+    sans-serif;
+  font-size: 13px;
 }
 
-#workspaces {
-  background: #112;
-  margin-left: 0.65rem;
-  padding: 0 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  border-radius: 0.5rem;
+#waybar {
+  background-color: rgba(0, 0, 0, 0);
 }
 
-#workspaces button {
-  padding: 0.25rem 0.5rem;
-}
-
-#workspaces button:hover {
-  padding: 0.25rem 0.5rem;
-  background: rgba(0, 190, 255, 0.3);
-  border-radius: 0;
-}
-
-#workspaces button.active {
-  background: #00ddff;
-  color: #223344;
-  border-radius: 0;
-}
-
-#backlight-slider {
-  background: #112;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  border-radius: 0 0.5rem 0.5rem 0;
-  padding-left: 0.5rem;
-}
-#backlight-slider slider {
-  min-height: 0px;
-  min-width: 0px;
-  box-shadow: none;
-  background: rgba(255, 255, 255, 0.4);
+label {
+  border-radius: 4px;
   border: none;
-}
-#backlight-slider trough {
-  min-width: 80px;
-  min-height: 2px;
-  border-radius: 5px;
-  background-color: white;
-}
-#backlight-slider highlight {
-  min-width: 0px;
-  border-radius: 5px;
-  background-color: teal;
-}
-#backlight {
-  background: #112;
-  border-radius: 0.5rem 0 0 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding-left: 0.5rem;
+  margin: 4px 2px;
+  padding: 0px 8px;
+  background-color: #2f2f40;
 }
 
-#pulseaudio {
-  margin: 0 0.5rem;
-  padding: 0 1rem;
-  background: #112;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  border-radius: 0.5rem;
+#custom-media {
+  margin: 0;
+  margin-right: 4px;
+  border-radius: 0px;
+  background-color: #1db954;
+  color: black;
 }
 
-#memory {
-  background: #112;
-  border-radius: 0.5rem 0 0 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding-left: 1rem;
-}
-#cpu {
-  background: #112;
-  border-radius: 0 0.5rem 0.5rem 0;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding-right: 0.5rem;
+#power-profiles-daemon {
+  margin-right: 16px;
 }
 
-#battery {
-  background: #112;
-  border-radius: 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding-right: 0.5rem;
-  padding-left: 0.75rem;
-  margin-left: 0.5rem;
+#power-profiles-daemon.performance {
+  background-color: #731a1a;
+  color: #ffffff;
 }
 
-#bluetooth {
-  background: #112;
-  border-radius: 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
+#power-profiles-daemon.balanced {
+  background-color: #075e77;
+  color: #ffffff;
 }
 
-#clock {
-  background: #112;
-  border-radius: 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-}
-
-#tray {
-  background: #112;
-  border-radius: 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  padding: 0 0.5rem;
-  margin-left: 0.5rem;
-  margin-right: 0.65rem;
+#power-profiles-daemon.power-saver {
+  background-color: #0c7a3f;
+  color: #ffffff;
 }
 
 #window {
-  background: #112;
-  border-radius: 0.5rem;
-  margin-top: 0.35rem;
-  margin-bottom: 0.35rem;
-  margin-left: 0.5rem;
-  margin-right: 0.65rem;
+  font-size: 16px;
+  color: white;
+}
+
+#window > * {
+  padding: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  font-weight: bold;
 }
