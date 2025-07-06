@@ -27,7 +27,7 @@
     width = (0, 500)
 
     # Position the notification in the top right corner
-    origin = top-left
+    origin = top-right
 
     # Offset from the origin
     offset = 30x30
@@ -120,7 +120,7 @@
 
     ### Text ###
 
-    font = UbuntuMono Nerd Font
+    font = JetBrainsMono Nerd Font
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -293,8 +293,8 @@
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
     mouse_left_click = do_action, close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -304,7 +304,7 @@
     # dunst will attempt to calculate an appropriate dpi value for each monitor
     # using the resolution and physical size. This might be useful in setups
     # where there are multiple screens with very different dpi values.
-    per_monitor_dpi = false
+    per_monitor_dpi = true
 
 
 [urgency_low]
