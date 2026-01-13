@@ -1,6 +1,6 @@
 # My dotfiles
 
-This is my configuration with bspwm, neovim, rofi, polybar, zsh and kitty.
+This is my configuration with hyprland, neovim, wofi, waybar, zsh and kitty.
 
 ## How to use it?
 
